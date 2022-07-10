@@ -1,0 +1,25 @@
+.h1{
+    font-size: 4rem !important;
+}
+
+.py-4{
+    padding: 8rem 0 !important;
+}
+
+
+project-img{
+    cursor: pointer;
+    width: 100%;
+}
+
+results{
+    cursor: pointer;
+
+    &:hover{
+        filter: saturate(3rem);
+    }
+}
+
+
+
+

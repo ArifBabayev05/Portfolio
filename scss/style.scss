@@ -1,0 +1,24 @@
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+
+
+
+
+// THESE ARE FOR OVERRIDING BOOTSTRAP'S CUSTOM VARIABLES
+@import "_custom-variables.scss";
+
+
+// FINANCE CALCULATOR CUSTOM CHANGES
+@import "../scss/myChanges.scss"  ;
+
+// MOVIES STYLESHEET
+@import './movies' ;
+
+// WEATHER APP STYLESHEET
+@import './weather' ;

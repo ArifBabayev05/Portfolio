@@ -1,0 +1,371 @@
+.body-movies{
+$black-low:rgb(62, 62, 62);
+$black-bg:rgb(43, 43, 43);
+$blue : rgb(0, 191, 255) ;
+$nav-bg : rgb(0, 191, 255) ;
+
+
+font-family: 'Arial Narrow', Arial, sans-serif ;
+font-weight: 700;
+box-sizing: border-box;
+background-color: $black-bg;
+
+padding: 0;
+margin: 0;
+color: white;
+
+
+.error-message{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1rem);
+    z-index: 100;
+
+    .err-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        h1{
+            margin: 2rem 0;
+            text-align: center;
+            color: red;
+            font-size: 5rem;
+            font-weight: 800;
+            font-family:  'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        button{
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            font-size: 3rem;
+            transition: background .3s ease;
+            &:hover,:focus,:active{
+                background: rgb(169, 255, 169);
+                color: white;
+            }
+        }
+    }
+
+    }
+
+.loading-message{
+    position: fixed;
+    display: none;
+    grid-template-columns: repeat(2,1fr);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%)
+     rotateZ(45deg) ;
+    z-index: 101;
+
+    span{
+        background-color: aqua;
+        width: 50px;
+        height: 50px;
+        display: block;
+        opacity: 0;
+        animation: loading-anim 1s infinite alternate;
+    }
+}
+
+
+// THIS THE HEADER SECTION
+header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background: $black-low;
+    box-shadow: 1px 0 30px rgba(0, 0, 0, 0.3);
+    padding-right: 1rem;
+    z-index: -4;
+
+    .search{
+        border-radius: 5px;
+        margin-left: auto;
+        border: none;
+        padding: .4rem 1rem;
+        box-shadow:  1px 2px 5px rgba(0, 0, 0, 0.1);  
+        &:focus,:active{
+            padding: .4rem 4rem;
+            text-align: center ;
+        }
+    }
+
+    i{
+        display: none;
+        border-radius: 3rem;
+        margin-right: auto;
+        font-size: 2rem;
+        color: white;
+        padding: 1rem;
+        cursor: pointer;
+        z-index: 5;
+
+        &:hover,:active,:focus{
+            background-color: rgb(235, 235, 235);
+        }
+        
+    }
+
+    .sec-nav{
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(40vh , 100vh));
+        background-color: transparent;
+        backdrop-filter: blur(1rem);
+        z-index: 2;
+        top: 0%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: left;
+        transform: scaleX(0) perspective(30rem);
+
+
+        span{
+            padding: 3rem 5rem;
+            margin: auto;
+            text-align: center;
+            font-size: 2rem;
+            cursor: pointer;
+
+            &:hover,:active,:focus{
+                background-color: $nav-bg;
+            }
+        }
+
+    }
+
+
+
+    nav{
+        margin-right: auto;
+        padding-right: 2rem;
+
+
+        div{
+            padding: 1.5rem 2rem;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            font-size: 1.3rem;
+            transition: background .4s ease;
+
+            &:hover,:focus,:active{
+                background-color: $nav-bg;
+                color: white;
+                .dropdown{
+                    display: grid;
+                }
+                .about-me{
+                    display: initial;
+                    z-index: 10;
+                }
+            }
+
+            .dropdown{
+                position: absolute;
+                display: none;
+                z-index: 6;
+                background: $nav-bg;
+                grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+                left: 0;
+                top: 95%;
+                width: 100vh;
+                border-radius: 0 .5rem .5rem .5rem ;
+                overflow: hidden;
+
+                &:hover,:active,:focus{
+                    display: grid;
+                }
+
+                .dropdown-item{
+                    color: white;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+                    padding: 2rem;
+                    transition: background .3s ease;
+
+                    &:hover,:focus,:active{
+                        background: rgba(240, 255, 255, 0.238);
+                    }
+                }
+            }
+
+            .about-me{
+                display: none;
+                position: absolute;
+                width: max-content;
+                top: 100%;
+                left: 0%;
+                background-color: $nav-bg;
+                border-radius: 0 .5rem .5rem .5rem ;
+                &:hover,:focus,:active{
+                    display: initial;
+                }
+                p{
+                    cursor: text;
+                    font-size: xx-large;
+                    &:nth-child(2),:nth-child(3){
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+
+// THIS IS THE MAIN SECTION
+main{
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+
+    
+
+
+
+    .movies-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(40vh,1fr));
+        gap: 1rem;
+        padding: 1rem ;
+
+        .movie{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 9px;
+            cursor: pointer;
+            transition: background .5s ease,
+                        transform .3s linear,
+                        box-shadow .3s linear;
+
+            box-shadow: 1px 2px 4px 0px rgb(100, 100, 100);
+            overflow: hidden;
+            background-color: $black-low;
+
+
+            &:hover,:focus,:active{
+                transform: scale(1.02);
+                z-index: 9;
+                box-shadow: 1px 2px 8px 0px rgb(187, 187, 187);
+
+                .movie-text-container h1::before{
+                    transform: scaleX(20);
+                }
+
+                & .movie-text-container{
+                    transform: translateY(0);
+                }
+            }
+
+            img{
+                width:100%;
+                border-radius: 9px 9px 0 0;
+            }
+
+            .visible-movie-title{
+                font-size: 1.5rem;
+                padding: 0 .5rem;
+                text-align: center;
+            }
+
+            .rating{
+                position: absolute;
+                color: white;
+                background: $nav-bg;
+                left: 2%;
+                top: 2%;
+                font-size: 1.5rem;
+            }
+
+
+            .movie-text-container{
+                border-radius: 9px 9px 0 0;
+                position: absolute;
+                padding: 1.2rem 1rem 0 1rem;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                transform: translateY(100%);
+                transition: transform .3s linear;
+                background: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(1rem);
+                color: white;
+                text-align: center;
+                font-size: 200%;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                
+
+                h1{
+                    padding: 0 .2rem;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    text-align: left;
+                    position: relative;
+                    margin-bottom: 1rem;
+                    &::before{
+                        content: ' ';
+                        height: 3%;
+                        width: 5%;
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        background:linear-gradient(45deg ,
+                            $blue , rgb(0, 238, 255)) ;
+                            transition: transform .3s .3s  linear;
+                        transform-origin: left;
+                    }
+                }
+
+                h5{
+                    text-align: left;
+
+                }
+
+            }
+        }
+    }
+
+}
+
+
+
+@media only screen and (max-width:975px){
+header{
+    nav{
+        display: none;
+    }
+    i{
+        display: inline-block;
+    }
+    .search{
+        margin: 1rem;
+    }
+}
+}
+
+}
+
+
+@keyframes loading-anim {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
