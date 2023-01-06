@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My-Portfolio</title>
 
-    <!-- MY SASS STYLESHEET -->
-    <!-- <link rel="stylesheet" href="node_modules/bootstrap/scss/bootstrap.scss">  -->
-    <link rel="stylesheet" href="assets/style.css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My-Portfolio</title>
 
-  <body>
-    <!-- THIS IS HOME SECTION -->
-    <div class="container-fluid">
-      <div class="row align-items-start pt-5">
-        <div class="col-lg-4 col-md-6 d-none d-md-block">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#0088ff" transform="translate(120 80) ">
-              <filter id="gooey">
-                <feGaussianBlur in="SourceGraphic" stDeviation="10" />
-                <feColorMatrix
-                  values="
+  <!-- MY SASS STYLESHEET -->
+  <!-- <link rel="stylesheet" href="node_modules/bootstrap/scss/bootstrap.scss">  -->
+  <link rel="stylesheet" href="assets/style.css/style.css" />
+</head>
+
+<body>
+  <!-- THIS IS HOME SECTION -->
+  <div class="container-fluid">
+    <div class="row align-items-start pt-5">
+      <div class="col-lg-4 col-md-6 d-none d-md-block">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#0088ff" transform="translate(120 80) ">
+            <filter id="gooey">
+              <feGaussianBlur in="SourceGraphic" stDeviation="10" />
+              <feColorMatrix values="
                 1 0 0 0 0
                 0 1 0 0 0
                 0 0 1 0 0
                 0 0 0 20 -10
-                "
-                />
-              </filter>
+                " />
+            </filter>
 
-              <animate
-                attributeName="d"
-                dur="5s"
-                repeatCount="indefinite"
-                values="
+            <animate attributeName="d" dur="5s" repeatCount="indefinite" values="
               M48,-45.7C63.7,-32.2,79,-16.1,77.9,-1.1C76.7,13.8,59.1,27.6,43.4,44C27.6,
               60.4,13.8,79.3,-2.5,81.9C-18.9,84.4,-37.8,70.6,-51.2,54.2C-64.5,37.8,-72.3,18.9,
               -71.1,1.1C-70,-16.6,-59.9,-33.2,-46.6,-46.7C-33.2,-60.1,-16.6,-70.4,-0.2,-70.2C16.1,-69.9,32.2,-59.1,48,-45.7Z;
@@ -58,249 +53,185 @@
               M48,-45.7C63.7,-32.2,79,-16.1,77.9,-1.1C76.7,13.8,59.1,27.6,43.4,44C27.6,
               60.4,13.8,79.3,-2.5,81.9C-18.9,84.4,-37.8,70.6,-51.2,54.2C-64.5,37.8,-72.3,18.9,
               -71.1,1.1C-70,-16.6,-59.9,-33.2,-46.6,-46.7C-33.2,-60.1,-16.6,-70.4,-0.2,-70.2C16.1,-69.9,32.2,-59.1,48,-45.7Z;
-              "
-              ></animate>
-            </path>
-          </svg>
-        </div>
-
-        <div class="col-lg-8 col-md-6 p-5 container">
-          <div class="row"><div class="col">HELLO, I'M</div></div>
-          <div class="row">
-            <div class="col h1 text-primary">Arif Babayev</div>
-          </div>
-          <div class="row">
-            <div class="col">
-              I'm a junior Web Developer & UI Designer who focuses on
-              crafting clean & user-friendly experiences. I am passionate about
-              building excellent websites that could impress users and improve
-              your company's revenue.
-            </div>
-
-          </div>
-
-          <div class="" download > 
-            <a class="mt-5 btn btn-primary" download="./images/FullStack--ArifBabayev.pdf" href="./images/FullStack--ArifBabayev.pdf"> See My Resume</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- THIS IS MAIN SECTION -->
-    <div class="container-fluid" style="margin-top: 12rem">
-      <div class="row align-items-center py-4">
-        <div class="col h1 main-txt text-center">
-          About <span class="text-primary">Me</span>
-        </div>
-
-        <div class="w-100 d-md-none"></div>
-
-        <div class="col p-5 text-center h5 fw-normal text-muted scnd-txt">
-          I am a self-taught web developer that is looking for opportunities to
-          grow my skillset in a professional environment. I come from a backend skills
-          and graphic design background, however i fell in love with programming and the
-          direct impact it has on its users.
-        </div>
+              "></animate>
+          </path>
+        </svg>
       </div>
 
-      <div
-        class="row align-items-center d-flex flex-md-row py-4 flex-sm-column-reverse"
-      >
-        <div class="col p-5 text-center h5 fw-normal text-muted scnd-txt">
-          My strengthes are in HTML, CSS, javascript (including ES6), SASS &
-          Bootstrap, ASP.NET, C#. I am currently in the process of learning React and for
-          creating complex single page applications.
-        </div>
-
-        <div class="col h1 main-txt text-center">
-          My <span class="text-primary">Skillset</span>
-        </div>
-      </div>
-
-      <div class="row align-items-center py-4">
-        <div class="col h1 main-txt text-center">
-          Experience & <br />
-          <span class="text-primary">Education</span>
-        </div>
-
-        <div class="w-100 d-md-none"></div>
-
-        <div class="col p-5 text-center h5 fw-normal text-muted scnd-txt">
-          I recieved a diplom in the Code Academy, I have also worked freelancer
-          for some customers at a few places before pursueing my ambition as a
-          web developer.
-        </div>
-      </div>
-    </div>
-
-    <!-- THIS IS MY PROJECTS SECTION -->
-    <div class="container py-4">
-      <div class="h1 d-block text-center my-5">
-        My <span class="text-primary"> Projects</span>
-      </div>
-      <div class="row gy-2">
-        <div class="col-lg-3 col-md-6 py-2">
-          <img
-            class="img-fluid d-block mx-auto"
-            src="./images/Screen Shot 2022-07-11 at 01.18.59.png"
-            alt="project image"
-          />
-          <p class="mx-auto text-center w-75">
-            A Education web page that makes use of pure
-            C# code to perform our courses,events and etc. Have Login and Register functions which supported by Gmail. The page is
-            created using Bootstrap and Asp.Net. And Also have own Admin Dashboard page.
-          </p>
-          <div
-            role="button"
-            class="btn-primary text-center rounded p-2 w-50 mx-auto"
-          >
-            <a
-              class="text-white text-decoration-none"
-              href="https://github.com/ArifBabayev05/Eduhome-Asp"
-              >View Project</a
-            >
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 py-2">
-          <img
-            class="img-fluid d-block mx-auto"
-            src="./images/Screen Shot 2022-07-11 at 01.21.03.png"
-            alt="project image"
-          />
-          <p class="mx-auto text-center w-75">
-            A dynamic Admin Dashboard app that fetches REST API data using axios
-            library, the app is styled using Asp.Net and Bootstrap andfully responsive and
-            interactive.
-          </p>
-          <div
-            role="button"
-            class="btn-primary text-center rounded p-2 w-50 mx-auto"
-          >
-            <a
-              class="text-white text-decoration-none"
-              href="https://github.com/ArifBabayev05/Fiorella-Asp"
-              >View Project</a
-            >
-          </div>
-        </div>
-
-        <div class="w-100 d-md-none"></div>
-
-        <div class="col-lg-3 col-md-6 py-2">
-          <img
-            class="img-fluid d-block mx-auto"
-            src="./images/Screen Shot 2022-07-11 at 01.22.59.png"
-            alt="project image"
-          />
-          <p class="mx-auto text-center w-75">
-            Flower Shop Website for view products, add them to basket. Have some other functions and also have own Admin Dashboard for manage product and Users.
-          </p>
-          <div
-            role="button"
-            class="btn-primary text-center rounded p-2 w-50 mx-auto"
-          >
-            <a
-              class="text-white text-decoration-none"
-              href="https://github.com/ArifBabayev05/Fiorella-Asp"
-              >View Project</a
-            >
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 py-2">
-          <img
-            class="img-fluid d-block mx-auto"
-            src="./images/Screen Shot 2022-07-11 at 01.23.48.png"
-            alt="project image"
-          />
-          <p class="mx-auto text-center w-75">
-            A Multiple Page which designed by CreativeTim. Use Html, Css, Js in this projects. 
-            Via Local Storage, You can Register and Login in Page. Website main idea is create simple documentation of Bootstrap v5. 
-          </p>
-          <div
-            role="button"
-            class="btn-primary text-center rounded p-2 w-50 mx-auto"
-          >
-          <a
-          class="text-white text-decoration-none"
-          href="https://github.com/ArifBabayev05/FrontEnd_Project.git"
-          >View Project</a
-        >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- THIS IS THE CONTACT ME SECTION -->
-    <div class="container-fluid py-4 col-lg-6 form">
-      <div class="d-block text-center h1">
-        Contact <span class="text-primary">Me</span>
-      </div>
-
-      <form class="container-fluid mt-5">
+      <div class="col-lg-8 col-md-6 p-5 container">
         <div class="row">
-          <div class="col-md-6 col-lg">
-            <input
-              required="required"
-              id="name-field"
-              type="name"
-              class="form-control"
-              name="name"
-              placeholder="Name"
-            />
-          </div>
-
-          <div class="w-100 d-md-none py-2"></div>
-
-          <div id="company-field" class="col-md-6 col-lg">
-            <input
-              required="required"
-              type="text"
-              name="company"
-              class="form-control"
-              placeholder="Company"
-            />
-          </div>
+          <div class="col">HELLO, I'M</div>
         </div>
-
-        <div class="row mt-4">
-          <div class="col">
-            <input
-              required="required"
-              id="email-field"
-              type="email"
-              name="email"
-              class="form-control rounded"
-              placeholder="Email"
-            />
-          </div>
+        <div class="row">
+          <div class="col h1 text-primary">Arif Babayev</div>
         </div>
-
         <div class="row">
           <div class="col">
-            <textarea
-              required="required"
-              id="message-field"
-              class="form-control d-block mt-4 mx-aoto"
-              name="txtarea"
-              rows="10"
-              placeholder="Your Message...."
-            ></textarea>
+            I'm a Web Developer who focuses on
+            crafting clean & user-friendly experiences. I am passionate about
+            building excellent websites that could impress users and improve
+            your company's revenue.
           </div>
+
         </div>
 
-        <div class="row mt-4">
-          <div class="col m-auto text-center">
-            <div role="button" id="submit-btn" class="btn-primary form-control">
-              SUBMIT
-            </div>
-          </div>
+        <div class="" download>
+          <a class="mt-5 btn btn-primary" download="./ArifBabayev-Development.pdf" href="./ArifBabayev-Development.pdf">
+            See My Resume</a>
         </div>
-      </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- THIS IS MAIN SECTION -->
+  <div class="container-fluid" style="margin-top: 12rem">
+    <div class="row align-items-center py-4">
+      <div class="col h1 main-txt text-center">
+        About <span class="text-primary">Me</span>
+      </div>
+
+      <div class="w-100 d-md-none"></div>
+
+      <div class="col p-5 text-center h5 fw-normal text-muted scnd-txt">
+        I am a self-taught web developer that is looking for opportunities to
+        grow my skillset in a professional environment. I come from a backend skills
+        and graphic design background, however i fell in love with programming and the
+        direct impact it has on its users.
+      </div>
     </div>
 
-    <!-- BOOTSTRAP SCRIPT -->
-    <script type="text/javascript" src="index.js"></script>
-  </body>
+    <div class="row align-items-center d-flex flex-md-row py-4 flex-sm-column-reverse">
+      <div class="col p-5 text-center h5 fw-normal text-muted scnd-txt">
+        My strengthes are in <strong>HTML, CSS, Javascript (including ES6), React, NodeJS, TypeScript, SASS &
+          Bootstrap, ASP.NET, C#, SQL </strong>. I am currently in the process of learning other Frameworks of
+        Javascript for
+        creating complex applications.
+      </div>
+
+      <div class="col h1 main-txt text-center">
+        My <span class="text-primary">Skillset</span>
+      </div>
+    </div>
+
+    <div class="row align-items-center py-4">
+      <div class="col h1 main-txt text-center">
+        Experience & <br />
+        <span class="text-primary">Education</span>
+      </div>
+
+      <div class="w-100 d-md-none"></div>
+
+      <div class="col p-5 text-center h5 fw-normal text-muted scnd-txt">
+        I recieved a Honour Degree diplom in the Code Academy, I have also worked freelancer
+        for some customers at a few places before pursueing my ambition as a
+        web developer.
+        Currently study at Azerbaijan State Oil and Industry University for bachelor degree.
+      </div>
+    </div>
+  </div>
+
+  <!-- THIS IS MY PROJECTS SECTION -->
+  <div class="container py-4">
+    <div class="h1 d-block text-center my-5">
+      My <span class="text-primary"> Projects</span>
+    </div>
+    <div class="row gy-2">
+      <div class="col-lg-3 col-md-6 py-2 container">
+        <img class="img-fluid d-block mx-auto container" src="./images/J2.png" alt="project image" />
+        <p class="mx-auto text-center w-75">
+          A Vacancy Site, Which Connects Companies and Employees.
+          Have registration, and send email functions.
+          You can search for vacancies by category or company.
+        </p>
+        <div role="button" class="btn-primary text-center rounded p-2 w-50 mx-auto">
+          <a class="text-white text-decoration-none" href="https://arifbabayev05.github.io/JoblyProjectt/"
+            target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 py-2 container">
+        <img class="img-fluid d-block mx-auto container" src="./images/Ca.png" alt="project image" />
+        <p class="mx-auto text-center w-75">
+          A calendar app which helps you planning your works. You can add tasks to any days. And divided them to groups.
+        </p>
+        <div role="button" class="btn-primary text-center rounded p-2 w-50 mx-auto">
+          <a class="text-white text-decoration-none" href="https://practise-pearl.vercel.app/" target="_blank">View
+            Project</a>
+        </div>
+      </div>
+
+      <div class="w-100 d-md-none"></div>
+
+      <div class="col-lg-3 col-md-6 py-2 container">
+        <img class="img-fluid d-block mx-auto container" src="./images/E.png" alt="project image" />
+        <p class="mx-auto text-center w-75">
+          WebCode Website serving to make small and medium-sized businesses more recognizable in the web world. </p>
+        <div role="button" class="btn-primary text-center rounded p-2 w-50 mx-auto">
+          <a class="text-white text-decoration-none" href="https://elegant-travesseiro-a51709.netlify.app/"
+            target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 py-2 container">
+        <img class="img-fluid d-block mx-auto container" src="./images/Screen Shot 2022-07-11 at 01.23.48.png"
+          alt="project image" />
+        <p class="mx-auto text-center w-75">
+          A Multiple Page which designed by CreativeTim. Use Html, Css, Js in this projects.
+          Via Local Storage, You can Register and Login in Page. Website main idea is create simple documentation of
+          Bootstrap v5.
+        </p>
+        <div role="button" class="btn-primary text-center rounded p-2 w-50 mx-auto">
+          <a class="text-white text-decoration-none" href="https://frontproject.netlify.app/"
+            target="_blank">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THIS IS THE CONTACT ME SECTION -->
+  <div class="container-fluid py-4 col-lg-6 form">
+    <div class="d-block text-center h1">
+      Contact <span class="text-primary">Me</span>
+    </div>
+
+   <div class="container">
+    <div class="SocialMedia justify-content-between d-flex">
+      <div class="MediaLogo align-items-center d-flex">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
+      </div>
+      <div class="MediaText align-items-center d-flex">
+        <a class="align-items-center justify-content-center  d-flex" target="_blank" href="https://www.linkedin.com/in/arif-babayev-7820a220a/">
+          <span class="fs-2">Linkedin</span>
+        </a>
+      </div>
+    </div>
+    
+    <div class="SocialMedia justify-content-between d-flex">
+      <div class="MediaLogo align-items-center d-flex">
+        <img width='10' src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png">
+      </div>
+      <div class="MediaText align-items-center d-flex">
+        <a class="align-items-center justify-content-center  d-flex" target="_blank" href="https://www.linkedin.com/in/arif-babayev-7820a220a/">
+          <span class="fs-2">Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="SocialMedia justify-content-between d-flex">
+      <div class="MediaLogo align-items-center d-flex">
+        <img class="" src="https://cdn-icons-png.flaticon.com/512/38/38401.png">
+      </div>
+      <div class="MediaText align-items-center d-flex">
+        <a class="align-items-center justify-content-center d-flex" target="_blank" href="https://github.com/ArifBabayev05">
+          <span  class="fs-2">Github</span>
+        </a>
+      </div>
+    </div>
+    
+   </div>
+  </div>
+
+  <!-- BOOTSTRAP SCRIPT -->
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
 </html>
